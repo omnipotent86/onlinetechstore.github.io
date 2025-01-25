@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tech Gadgets Store - Laptops</title>
+    <style>
+        header {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+            padding: 20px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        .product-card {
+            background: white;
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+        }
+        .product-card img {
+            max-width: 300px;
+            height: 250px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+        .product-card button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tech Gadgets Store</h1>
+    </header>
+    <div class="container">
+        <h1>Laptops</h1>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="laptop.jpeg" alt="ProBook Laptop">
+                <div>
+                    <h3>ASUS TUF gaming laptop</h3>
+                    <p>High-performance laptop</p>
+                    <p>₹1,02,000</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

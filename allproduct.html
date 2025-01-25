@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tech Gadgets Store - All Products</title>
+    <style>
+        header {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+            padding: 20px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .product-card {
+            background: white;
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: center;
+        }
+        .product-card img {
+            max-width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .product-card button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tech Gadgets Store</h1>
+    </header>
+    <div class="container">
+        <h1>All Products</h1>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="/api/placeholder/250/200" alt="Smartphone X">
+                <h3>Smartphone X</h3>
+                <p>Latest model smartphone</p>
+                <p>$599.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="/api/placeholder/250/200" alt="ProBook Laptop">
+                <h3>ProBook Laptop</h3>
+                <p>High-performance laptop</p>
+                <p>$1,299.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="/api/placeholder/250/200" alt="Noise Cancelling Headphones">
+                <h3>Noise Cancelling Headphones</h3>
+                <p>Premium sound quality</p>
+                <p>$249.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="/api/placeholder/250/200" alt="Budget Smartphone">
+                <h3>Budget Smartphone</h3>
+                <p>Affordable smartphone option</p>
+                <p>$299.99</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

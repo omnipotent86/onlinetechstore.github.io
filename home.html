@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tech Gadgets Store</title>
+    <style>
+        a{
+            text-decoration: none;
+            color:white
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+            input[type="checkbox"] {
+            display: none;
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            background: #444;
+            padding: 1rem;
+            text-decoration: none;
+        }
+        .nav label {
+            color: white;
+            cursor: pointer;
+            margin-right: 15px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 20px 0;
+        }
+        .product-card {
+            background: white;
+            border: 1px solid #ef0808;
+            padding: 15px;
+            text-align: center;
+        }
+        .product-card img {
+            max-width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .cart-toggle {
+            top: 10px;
+            right: 10px;
+            background: #f1f1f1;
+            padding: 10px;
+        }
+        /* Category Filtering */
+        #all:checked ~ .product-grid .product-card,
+        #phones:checked ~ .product-grid .product-card[data-category="phones"],
+        #laptops:checked ~ .product-grid .product-card[data-category="laptops"],
+        #accessories:checked ~ .product-grid .product-card[data-category="accessories"] {
+            display: block;
+        }
+        #all:not(:checked) ~ .product-grid .product-card,
+        #phones:not(:checked) ~ .product-grid .product-card:not([data-category="phones"]),
+        #laptops:not(:checked) ~ .product-grid .product-card:not([data-category="laptops"]),
+        #accessories:not(:checked) ~ .product-grid .product-card:not([data-category="accessories"]) {
+            display: none;
+        }
+        /* Cart Simulation */
+        .cart-toggle::after {
+            content: "0";
+        }
+        .add-to-cart {
+            position: relative;
+        }
+        .add-to-cart input[type="checkbox"] {
+            position: absolute;
+            opacity: 0;
+        }
+        .add-to-cart label {
+            background: #4CAF50;
+            color: white;
+            padding: 10px;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .add-to-cart input[type="checkbox"]:checked + label {
+            background: #45a049;
+        }
+        .checkout {
+            background: white;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .checkout input {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+        }
+        .checkout button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Tech Gadgets Store</h1>
+    </header>
+    
+
+    <div class="nav">
+        <div>
+            <label for="phones"><a href="phone.html">Accessories</a></label>
+            <label for="laptops"><a href="laptop.html">Laptop</a></label>
+            <label for="accessories"><a href="acc.html">Phones</a></label>
+        </div>
+        <div class="cart-toggle">Cart:</div>
+    </div>
+
+    <div class="container">
+        <div class="product-grid">
+            <div class="product-card" data-category="phones">
+                <img src="phone.jpeg" alt="Smartphone">
+                <h3>Iphone 16 promax </h3>
+                <p>Latest model smartphone</p>
+                <p>₹1,44,000</p>
+                <div class="add-to-cart">
+                    <input type="checkbox" id="cart1">
+                    <label for="cart1">Add to Cart</label>
+                </div>
+            </div>
+            <div class="product-card" data-category="laptops">
+                <img src="laptop.jpeg" alt="Laptop">
+                <h3>ASUS TUF gaming laptop</h3>
+                <p>High-performance laptop</p>
+                <p>₹1,02,000</p>
+                <div class="add-to-cart">
+                    <input type="checkbox" id="cart2">
+                    <label for="cart2">Add to Cart</label>
+                </div>
+            </div>
+            <div class="product-card" data-category="accessories">
+                <img src="headphones.jpeg" alt="Headphones">
+                <h3>Boat Noise Cancelling Headphones</h3>
+                <p>Premium sound quality</p>
+                <p>₹1,999</p>
+                <div class="add-to-cart">
+                    <input type="checkbox" id="cart3">
+                    <label for="cart3">Add to Cart</label>
+                </div>
+            </div>
+            <div class="product-card" data-category="phones">
+                <img src="budgetsmartphone.webp" alt="Budget Phone">
+                <h3>Redmi note 13 pro</h3>
+                <p>Affordable smartphone option</p>
+                <p>₹18,090</p>
+                <div class="add-to-cart">
+                    <input type="checkbox" id="cart4">
+                    <label for="cart4">Add to Cart</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="checkout">
+            <h2>Checkout</h2>
+            <form>
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="text" placeholder="Address" required>
+                <button type="submit">Complete Purchase</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
